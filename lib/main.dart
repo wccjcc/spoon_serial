@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'secondPage.dart';
 import 'TermQuizHome.dart';
 import 'FeaturePracHome.dart';
+import 'TermQuiz.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +24,10 @@ class MyApp extends StatelessWidget {
         '/second' : (context) => Select_Mode(),
         '/featureprac' : (context) => FeaturePracticePage(),
         '/TermQuiz' : (context) => TermQuizPage(),
+        '/TermQuiz1' : (context) => TermQuiz1(),
+        '/TermQuiz1result' : (context) => TermQuiz1result(),
+        '/TermQuiz2' : (context) => TermQuiz2(),
+        '/TermQuiz2result' : (context) => TermQuiz2result(),
       },
       home: FirstPage(),
     );
@@ -39,10 +44,10 @@ class FirstPage extends StatelessWidget{
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        initialRoute: '/',
+        /*initialRoute: '/',
         routes: {
           '/second' : (context) => Select_Mode(),
-        },
+        },*/
         home: Scaffold(
             body:Center(
                 child:Column(
