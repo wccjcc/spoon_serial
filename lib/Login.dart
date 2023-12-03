@@ -58,7 +58,7 @@ class _LoginState extends State<Login_Intro>{
                       padding: EdgeInsets.only(top:20),
                       child:ElevatedButton(
                           onPressed: (){
-                            Navigator.of(context).pushNamed('/JoinPage');
+
                           },
                           child: const Text('로그인',style: TextStyle(fontSize:25)),
                           style: ElevatedButton.styleFrom(
@@ -76,7 +76,7 @@ class _LoginState extends State<Login_Intro>{
                       padding: EdgeInsets.only(top:20),
                       child: Row(
                         children: <Widget>[
-                          TextButton(onPressed: (){}, child: Text('회원가입',style: TextStyle(fontSize:15,color: Colors.black),)),
+                          TextButton(onPressed: (){Navigator.of(context).pushNamed('/JoinPage');}, child: Text('회원가입',style: TextStyle(fontSize:15,color: Colors.black),)),
                           Text('|'),
                           TextButton(onPressed: (){}, child: Text('아이디/비밀번호 찾기',style: TextStyle(fontSize:15,color: Colors.black),)),
 
@@ -92,10 +92,16 @@ class _LoginState extends State<Login_Intro>{
         color: Colors.grey,
         child: Center(child: Text('고정된 하단 컨텐츠')),
       ),
-
-
-
-
+      floatingActionButton: SizedBox(
+          height: 60,
+          width: 60,
+          child:FittedBox(
+            child: FloatingActionButton(
+              onPressed: (){Navigator.of(context).pushNamed('/second');},
+              child: Icon(Icons.home),
+            ),
+          )
+      ),
 
 
 

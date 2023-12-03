@@ -10,6 +10,8 @@ import 'Kiosk_Intro.dart';
 import 'Login.dart';
 import 'Join.dart';
 import 'Taxi_Intro.dart';
+import 'LoginAgain.dart';
+import 'Pay.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,6 +49,11 @@ class MyApp extends StatelessWidget {
         '/Icecream_Goal' : (context) => Icecream_Goal(),
         '/Login_Intro' : (context) => Login_Intro(),
         '/JoinPage' : (context) => JoinPage(),
+        '/LoginAgain' : (context) => Login_Again(),
+        '/LoginSuccess' : (context) => LoginSuccess(),
+        '/Pay_Intro' : (context) => Pay_Intro(),
+        '/Pay_Input' : (context) => Pay_Input(),
+        '/Pay_Success' : (context) => Pay_Success(),
       },
       home: FirstPage(),
     );

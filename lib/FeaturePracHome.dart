@@ -26,6 +26,7 @@ class FeaturePracticePage extends StatelessWidget {
                 }),
                 _buildBoxButton(context, "결제", Icons.payment, () {
                   // 결제 버튼을 탭했을 때의 동작
+                  Navigator.of(context).pushNamed('/Pay_Intro');
                 }),
                 _buildBoxButton(context, "키오스크", Icons.computer, () {
                   // 기요스크 버튼을 탭했을 때의 동작
