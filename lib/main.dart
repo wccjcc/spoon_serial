@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:spoon_serial_wj/Taxi_Intro.dart';
 import 'secondPage.dart';
 import 'TermQuizHome.dart';
 import 'FeaturePracHome.dart';
 import 'TermQuiz.dart';
+import 'Delivery_Intro.dart';
+import 'Banking_Intro.dart';
+import 'Kiosk_Intro.dart';
+import 'Login.dart';
+import 'Join.dart';
+import 'Taxi_Intro.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +35,18 @@ class MyApp extends StatelessWidget {
         '/TermQuiz1result' : (context) => TermQuiz1result(),
         '/TermQuiz2' : (context) => TermQuiz2(),
         '/TermQuiz2result' : (context) => TermQuiz2result(),
+        '/TermQuizEnd' : (context) => TermQuizEnd(),
+        '/Taxi_Intro' : (context) => Taxi_Intro(),
+        '/Delivery_Intro' : (context) => Delivery_Intro(),
+        '/Taxi_Goal' : (context) => Taxi_Goal(),
+        '/Delivery_Goal' : (context) => Delivery_Goal(),
+        '/Banking_Intro' : (context) => Banking_Intro(),
+        '/Banking_Goal' : (context) => Banking_Goal(),
+        '/Kiosk_Intro' : (context) => Kiosk_Intro(),
+        '/Icecream_Intro' : (context) => Icecream_Intro(),
+        '/Icecream_Goal' : (context) => Icecream_Goal(),
+        '/Login_Intro' : (context) => Login_Intro(),
+        '/JoinPage' : (context) => JoinPage(),
       },
       home: FirstPage(),
     );
