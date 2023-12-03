@@ -10,14 +10,21 @@ class TermQuizPage extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.all(15),
-              child: Text('랜덤 용어 퀴즈를 \n시작하겠습니다!',style: TextStyle(fontSize:30),),
+              child: Text('랜덤 용어 퀴즈를 \n시작하겠습니다!',style: TextStyle(fontSize:35,fontWeight: FontWeight.bold),),
             ),
             Padding(
-              padding: EdgeInsets.all(15),
-              child: ElevatedButton(
-                onPressed: (){Navigator.of(context).pushNamed('/TermQuiz1');},
-                child: const Text('시작하기',style: TextStyle(fontSize:20),),
-              )
+              padding: EdgeInsets.only(top:10),
+              child:ElevatedButton(
+                  onPressed: (){
+                    Navigator.of(context).pushNamed('/TermQuiz1');
+                  },
+                  child: const Text('시작하기',style: TextStyle(fontSize:25,fontWeight: FontWeight.bold)),
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: Size(350,50),
+                    backgroundColor: Colors.green[900],
+                    shape: StadiumBorder(),
+                  )
+              ),
             )
           ],
         )

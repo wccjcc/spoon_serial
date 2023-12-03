@@ -7,7 +7,7 @@ class FeaturePracticePage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.only(top:70,bottom: 30),
             child: Text(
               "어떤 기능을 연습해볼까요?",
               style: TextStyle(
@@ -54,7 +54,11 @@ class FeaturePracticePage extends StatelessWidget {
 
   Widget _buildBoxButton(BuildContext context, String title, IconData icon, VoidCallback onTap) {
     return Card(
-      margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0), // 카드의 여백을 지정합니다.
+      margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0), // 모서리 둥근 정도
+        side: BorderSide(color: Colors.grey, width: 2), // 테두리 색상과 두께
+      ),
       child: InkWell(
         onTap: onTap,
         splashColor: Theme.of(context).colorScheme.onSurface.withOpacity(0.12),
@@ -65,7 +69,7 @@ class FeaturePracticePage extends StatelessWidget {
             children: <Widget>[
               Icon(icon, size: 30.0), // 아이콘을 추가합니다.
               SizedBox(width: 24.0), // 아이콘과 텍스트 사이의 간격을 추가합니다.
-              Text(title, style: TextStyle(fontSize: 18.0)),
+              Text(title, style: TextStyle(fontSize:20,fontWeight: FontWeight.bold)),
             ],
           ),
         ),

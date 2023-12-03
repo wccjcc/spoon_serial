@@ -79,19 +79,24 @@ class FirstPage extends StatelessWidget{
                 child:Column(
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(top: 300,bottom:300),
-                      child:Text('반갑습니다!',textAlign: TextAlign.center,style: TextStyle(color: Colors.black, fontSize: 40)),
+                      padding: EdgeInsets.only(top: 300,bottom:10),
+                      child:Text('반갑습니다!',textAlign: TextAlign.center,style: TextStyle(color: Colors.black, fontSize: 48,fontWeight: FontWeight.bold)),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top:20),
+                      padding: EdgeInsets.only(top: 5),
+                      child:Text('여러분의 행복한 디지털 생활을 \n책임지는 시리얼(Serial)입니다!',textAlign: TextAlign.center,style: TextStyle(color: Colors.black, fontSize: 25,)),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top:30),
                       child:ElevatedButton(
                           onPressed: (){
                             Navigator.of(context).pushNamed('/second');
                           },
-                          child: const Text('시작하기',style: TextStyle(fontSize:25)),
+                          child: const Text('시작하기',style: TextStyle(fontSize:25,fontWeight: FontWeight.bold)),
                           style: ElevatedButton.styleFrom(
                               minimumSize: Size(350,50),
-                              backgroundColor: Colors.green
+                              backgroundColor: Colors.green[900],
+                            shape: StadiumBorder(),
                           )
                       ),
                     )
