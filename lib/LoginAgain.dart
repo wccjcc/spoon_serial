@@ -36,19 +36,20 @@ class _LoginAgainState extends State<Login_Again>{
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("회원가입/로그인"),
+        title: Text("회원가입/로그인",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: <Widget>[
           IconButton(onPressed: (){Navigator.of(context).pushNamed('/TermQuiz1result');}, icon: Icon(Icons.arrow_forward)),
         ],
+        backgroundColor: Colors.green[900],
       ),
       body: SingleChildScrollView(
           child:Column(
             children: <Widget>[
               Padding(
-                  padding: EdgeInsets.all(1),
+                  padding: EdgeInsets.all(20),
                   child: Center(
-                    child: Text('회원 로그인'),
+                    child: Text('회원 로그인',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                   )
               ),
               Padding(
@@ -77,9 +78,12 @@ class _LoginAgainState extends State<Login_Again>{
                   padding: EdgeInsets.all(10),
                   child: Row(
                     children: <Widget>[
-                      Text('보안접속'),
+                      Text('보안접속',textAlign: TextAlign.left,),
+                      Expanded(
+                        child: Container(),
+                      ),
                       Icon(Icons.check_box),
-                      Text('아이디 저장'),
+                      Text('아이디 저장',textAlign: TextAlign.right,),
                     ],
                   )
               ),
@@ -98,10 +102,10 @@ class _LoginAgainState extends State<Login_Again>{
                       }
 
                     },
-                    child: const Text('로그인',style: TextStyle(fontSize:25)),
+                    child: const Text('로그인',style: TextStyle(fontSize:25,fontWeight: FontWeight.normal)),
                     style: ElevatedButton.styleFrom(
                         minimumSize: Size(350,50),
-                        backgroundColor: Colors.green
+                        backgroundColor: Colors.black
                     )
                 ),
               ),
@@ -116,11 +120,12 @@ class _LoginAgainState extends State<Login_Again>{
               Padding(
                 padding: EdgeInsets.only(top:20),
                 child:  Container(width: 500,
-                    child: Divider(color: Colors.red, thickness: 2.0)),
+                    child: Divider(color: Colors.black54, thickness: 1.0)),
               ),
               Padding(
-                padding: EdgeInsets.only(top:20),
+                padding: EdgeInsets.only(top:8),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     TextButton(onPressed: (){}, child: Text('회원가입',style: TextStyle(fontSize:15,color: Colors.black),)),
                     Text('|'),
@@ -135,8 +140,24 @@ class _LoginAgainState extends State<Login_Again>{
       ),
       bottomNavigationBar: Container(
         height: 250, // 고정된 하단 컨테이너 높이
-        color: Colors.grey,
-        child: Center(child: Text('$id 와 $password 와 $name')),
+        color: Colors.grey[400],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(top: 10,bottom: 5,left: 10),
+              child: Text('도움말',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),textAlign: TextAlign.left,),
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('이제 회원가입 때 입력한 정보로 \n로그인 할 수 있습니다!',style: TextStyle(fontSize: 18),)
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('아이디와 비밀번호를 입력 후 \n로그인 버튼을 클릭하세요',style: TextStyle(fontSize: 18),)
+            ),
+          ],
+        ),
       ),
       floatingActionButton: SizedBox(
           height: 60,
@@ -145,6 +166,7 @@ class _LoginAgainState extends State<Login_Again>{
             child: FloatingActionButton(
               onPressed: (){Navigator.of(context).pushNamed('/second');},
               child: Icon(Icons.home),
+              backgroundColor: Colors.green[900],
             ),
           )
       ),
@@ -177,13 +199,18 @@ class LoginSuccess extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.all(15),
-                  child: Text('안녕하세요 $name님! \n 로그인에 성공하였습니다!',style: TextStyle(fontSize:30),),
+                  child: Text('로그인에 성공하였습니다!\n안녕하세요 $name님!',style: TextStyle(fontSize:30,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
                 ),
                 Padding(
                     padding: EdgeInsets.all(15),
                     child: ElevatedButton(
                       onPressed: (){Navigator.of(context).pushNamed('/second');},
-                      child: const Text('처음으로 돌아가기',style: TextStyle(fontSize:20),),
+                      child: const Text('처음으로 돌아가기',style: TextStyle(fontSize:23,fontWeight: FontWeight.bold),),
+                        style: ElevatedButton.styleFrom(
+                          minimumSize: Size(350,50),
+                          backgroundColor: Colors.green[900],
+                          shape: StadiumBorder(),
+                        )
                     )
                 ),
 

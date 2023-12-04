@@ -9,31 +9,61 @@ class _PayState extends State<Pay_Intro>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text("결제"),
+        title: Text("결제",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: <Widget>[
           IconButton(onPressed: (){Navigator.of(context).pushNamed('/TermQuiz1result');}, icon: Icon(Icons.arrow_forward)),
         ],
+        backgroundColor: Colors.green[900],
       ),
       body: SingleChildScrollView(
           child:Column(
             children: <Widget>[
               Padding(
-                  padding: EdgeInsets.all(1),
-                  child: Text('최종 결제')
+                  padding: EdgeInsets.all(20),
+                  child: Text('최종 결제',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
               ),
               Padding(
                 padding: EdgeInsets.all(5),
                 child: Column(
                   children: <Widget>[
+
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        OutlinedButton(onPressed: (){}, child: Text('oo페이')),
-                        OutlinedButton(onPressed: (){Navigator.of(context).pushNamed('/Pay_Input');}, child: Text('신용카드')),
-                        OutlinedButton(onPressed: (){}, child: Text('ㅁㅁ결제'))
+                        Container(
+                          width: 100,
+                          height: 50,
+                          child: Column(
+                            children: [
+                              Container(),
+                              OutlinedButton(onPressed: (){}, child: Text('oo페이')),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          width:2,
+                          height: 50,
+                        ),
+                        Container(
+                          width: 100,
+                          height: 50,
+                          child: OutlinedButton(onPressed: (){Navigator.of(context).pushNamed('/Pay_Input');}, child: Text('신용카드')),
+                        ),
+                        Container(
+                          width:2,
+                          height: 50,
+                        ),
+                        Container(
+                          width: 100,
+                          height: 50,
+                          child: OutlinedButton(onPressed: (){}, child: Text('ㅁㅁ결제')),
+                        ),
+
                       ],
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         OutlinedButton(onPressed: (){}, child: Text('내통장결제')),
                         OutlinedButton(onPressed: (){}, child: Text('휴대폰결제')),
@@ -70,6 +100,7 @@ class _PayState extends State<Pay_Intro>{
             child: FloatingActionButton(
               onPressed: (){Navigator.of(context).pushNamed('/second');},
               child: Icon(Icons.home),
+              backgroundColor: Colors.green[900],
             ),
           )
       ),
