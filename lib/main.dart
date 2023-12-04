@@ -70,10 +70,7 @@ class FirstPage extends StatelessWidget{
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        /*initialRoute: '/',
-        routes: {
-          '/second' : (context) => Select_Mode(),
-        },*/
+
         home: Scaffold(
             body:Center(
                 child:Column(

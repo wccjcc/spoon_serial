@@ -4,6 +4,7 @@ class JoinPage extends StatefulWidget {
   @override
   _JoinState createState() => _JoinState();
 }
+
 class _JoinState extends State<JoinPage>{
   final TextEditingController _idController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -23,7 +24,6 @@ class _JoinState extends State<JoinPage>{
         title: Text("회원가입",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: <Widget>[
-          IconButton(onPressed: (){Navigator.of(context).pushNamed('/TermQuiz1result');}, icon: Icon(Icons.arrow_forward)),
         ],
         backgroundColor: Colors.green[900],
       ),

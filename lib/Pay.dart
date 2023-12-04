@@ -12,7 +12,7 @@ class _PayState extends State<Pay_Intro>{
         title: Text("결제",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: <Widget>[
-          IconButton(onPressed: (){Navigator.of(context).pushNamed('/TermQuiz1result');}, icon: Icon(Icons.arrow_forward)),
+          IconButton(onPressed: (){Navigator.of(context).pushNamed('/Pay_Input');}, icon: Icon(Icons.arrow_forward)),
         ],
         backgroundColor: Colors.green[900],
       ),
@@ -20,61 +20,133 @@ class _PayState extends State<Pay_Intro>{
           child:Column(
             children: <Widget>[
               Padding(
-                  padding: EdgeInsets.all(20),
+                  padding: EdgeInsets.all(15),
                   child: Text('최종 결제',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 2),
+                child: Container(
+                  color: Colors.black54,
+                  height: 1,
+                ),
               ),
               Padding(
                 padding: EdgeInsets.all(5),
                 child: Column(
                   children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(bottom:5),
+                      child: Text('결제 수단',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black54),),
+                    ),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          width: 100,
-                          height: 50,
-                          child: Column(
-                            children: [
-                              Container(),
-                              OutlinedButton(onPressed: (){}, child: Text('oo페이')),
-                            ],
-                          ),
+                          width: 120,
+                          height: 60,
+                          child: OutlinedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey[200]),side: MaterialStateProperty.all(
+                            BorderSide(
+                              color: Colors.grey, // 테두리 색상
+                              width: 2.0, // 테두리 두께
+                            ),
+                          ), ), child: Text('oo페이',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black54),)),
                         ),
                         Container(
                           width:2,
                           height: 50,
                         ),
                         Container(
-                          width: 100,
-                          height: 50,
-                          child: OutlinedButton(onPressed: (){Navigator.of(context).pushNamed('/Pay_Input');}, child: Text('신용카드')),
+                          width: 120,
+                          height: 60,
+                          child: OutlinedButton(onPressed: (){Navigator.of(context).pushNamed('/Pay_Input');},style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey[200]),side: MaterialStateProperty.all(
+                            BorderSide(
+                              color: Colors.grey, // 테두리 색상
+                              width: 2.0, // 테두리 두께
+                            ),
+                          ), ), child: Text('신용카드',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black54),)),
                         ),
                         Container(
                           width:2,
                           height: 50,
                         ),
                         Container(
-                          width: 100,
-                          height: 50,
-                          child: OutlinedButton(onPressed: (){}, child: Text('ㅁㅁ결제')),
+                          width: 120,
+                          height: 60,
+                          child: OutlinedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey[200]),side: MaterialStateProperty.all(
+                            BorderSide(
+                              color: Colors.grey, // 테두리 색상
+                              width: 2.0, // 테두리 두께
+                            ),
+                          ), ), child: Text('oo페이',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black54),)),
                         ),
 
                       ],
                     ),
+                    Container(height: 3,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        OutlinedButton(onPressed: (){}, child: Text('내통장결제')),
-                        OutlinedButton(onPressed: (){}, child: Text('휴대폰결제')),
-                        OutlinedButton(onPressed: (){}, child: Text('ㅇㅇ페이'))
+                        Container(
+                          width: 120,
+                          height: 60,
+                          child: OutlinedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey[200]),side: MaterialStateProperty.all(
+                            BorderSide(
+                              color: Colors.grey, // 테두리 색상
+                              width: 2.0, // 테두리 두께
+                            ),
+                          ), ), child: Text('휴대폰 결제',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black54),)),
+                        ),
+                        Container(
+                          width:2,
+                          height: 50,
+                        ),
+                        Container(
+                          width: 120,
+                          height: 60,
+                          child: OutlinedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey[200]),side: MaterialStateProperty.all(
+                            BorderSide(
+                              color: Colors.grey, // 테두리 색상
+                              width: 2.0, // 테두리 두께
+                            ),
+                          ), ), child: Text('계좌이체',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black54),)),
+                        ),
+                        Container(
+                          width:2,
+                          height: 50,
+                        ),
+                        Container(
+                          width: 120,
+                          height: 60,
+                          child: OutlinedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey[200]),side: MaterialStateProperty.all(
+                            BorderSide(
+                              color: Colors.grey, // 테두리 색상
+                              width: 2.0, // 테두리 두께
+                            ),
+                          ), ), child: Text('아이코',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black54),)),
+                        ),
+
                       ],
                     ),
-                    Text('<나의 카드와 정보>'),
-                    Row(
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Row(
+                          children: [
+                            Icon(Icons.check),
+                            Text(' 나의 카드와 정보 ',textAlign: TextAlign.left,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.asset('image/card_info.png',width:200,height: 100,fit:BoxFit.contain),
-                        Text('카드 비밀번호 : 1234'),
+                        Image.asset('image/card_info.png',width:200,height: 150,fit:BoxFit.contain),
+                        Text('카드 비밀번호 : 1234',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
                       ],
                     )
 
@@ -90,8 +162,24 @@ class _PayState extends State<Pay_Intro>{
       ),
       bottomNavigationBar: Container(
         height: 250, // 고정된 하단 컨테이너 높이
-        color: Colors.grey,
-        child: Center(child: Text('고정된 하단 컨텐츠')),
+        color: Colors.grey[400],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(top: 10,bottom: 5,left: 10),
+              child: Text('도움말',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),textAlign: TextAlign.left,),
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('신용카드로 결제를 해보겠습니다!',style: TextStyle(fontSize: 18),)
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('먼저, 결제 수단에서 신용카드 버튼을 눌러주세요',style: TextStyle(fontSize: 18),)
+            ),
+          ],
+        ),
       ),
       floatingActionButton: SizedBox(
           height: 60,
@@ -137,25 +225,33 @@ class _PayinputState extends State<Pay_Input>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text("결제"),
+        title: Text("결제",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: <Widget>[
           IconButton(onPressed: (){Navigator.of(context).pushNamed('/TermQuiz1result');}, icon: Icon(Icons.arrow_forward)),
         ],
+        backgroundColor: Colors.green[900],
       ),
       body: SingleChildScrollView(
           child:Column(
             children: <Widget>[
               Padding(
-                  padding: EdgeInsets.all(1),
-                  child: Text('최종 결제')
+                  padding: EdgeInsets.all(15),
+                  child: Text('최종 결제',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 2),
+                child: Container(
+                  color: Colors.black54,
+                  height: 1,
+                ),
               ),
               Padding(
                 padding: EdgeInsets.all(5),
                 child: Column(
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(5),
                       child: Center(
                           child: TextField(
                             controller: _cardnumController,
@@ -166,7 +262,7 @@ class _PayinputState extends State<Pay_Input>{
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(5),
                       child: Center(
                           child: TextField(
                             controller: _validController,
@@ -177,7 +273,7 @@ class _PayinputState extends State<Pay_Input>{
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(5),
                       child: Center(
                           child: TextField(
                             controller: _cvcController,
@@ -188,7 +284,7 @@ class _PayinputState extends State<Pay_Input>{
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(5),
                       child: Center(
                           child: TextField(
                             controller: _pwController,
@@ -199,13 +295,6 @@ class _PayinputState extends State<Pay_Input>{
                       ),
                     ),
 
-                    Text('<나의 카드와 정보>'),
-                    Row(
-                      children: [
-                        Image.asset('image/card_info.png',width:200,height: 100,fit:BoxFit.contain),
-                        Text('카드 비밀번호 : 1234'),
-                      ],
-                    ),
                     Padding(
                       padding: EdgeInsets.only(top:5),
                       child:ElevatedButton(
@@ -233,12 +322,33 @@ class _PayinputState extends State<Pay_Input>{
                               );
                             }
                           },
-                          child: const Text('결제',style: TextStyle(fontSize:25)),
+                          child: const Text('결제',style: TextStyle(fontSize:22,)),
                           style: ElevatedButton.styleFrom(
-                              minimumSize: Size(300,30),
-                              backgroundColor: Colors.green
+                              minimumSize: Size(300,40),
+                              backgroundColor: Colors.black
                           )
                       ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Row(
+                          children: [
+                            Icon(Icons.check),
+                            Text(' 나의 카드와 정보 ',textAlign: TextAlign.left,style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset('image/card_info.png',width:200,height: 120,fit:BoxFit.contain),
+                        Text('카드 비밀번호 : 1234',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                      ],
                     ),
 
                   ],
@@ -252,9 +362,25 @@ class _PayinputState extends State<Pay_Input>{
 
       ),
       bottomNavigationBar: Container(
-        height: 200, // 고정된 하단 컨테이너 높이
-        color: Colors.grey,
-        child: Center(child: Text('고정된 하단 컨텐츠')),
+        height: 150, // 고정된 하단 컨테이너 높이
+        color: Colors.grey[400],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(top: 10,bottom: 2,left: 10),
+              child: Text('도움말',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),textAlign: TextAlign.left,),
+            ),
+            Padding(
+                padding: EdgeInsets.only(left: 10,bottom: 1),
+                child: Text('화면 하단의 <나의 카드와 정보>를 보고 \n카드 정보를 입력해 결제 버튼을 눌러주세요',style: TextStyle(fontSize: 18),)
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('조언 : VALID 는 유효기간(월/년) 입니다',style: TextStyle(fontSize: 18),)
+            ),
+          ],
+        ),
       ),
       floatingActionButton: SizedBox(
           height: 60,
@@ -263,6 +389,7 @@ class _PayinputState extends State<Pay_Input>{
             child: FloatingActionButton(
               onPressed: (){Navigator.of(context).pushNamed('/second');},
               child: Icon(Icons.home),
+              backgroundColor: Colors.green[900],
             ),
           )
       ),
@@ -287,13 +414,18 @@ class Pay_Success extends StatelessWidget{
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.all(15),
-                  child: Text('결제에 성공하였습니다!',style: TextStyle(fontSize:30),),
+                  child: Text('축하드립니다\n결제에 성공하였습니다!',style: TextStyle(fontSize:30,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
                 ),
                 Padding(
                     padding: EdgeInsets.all(15),
                     child: ElevatedButton(
                       onPressed: (){Navigator.of(context).pushNamed('/second');},
-                      child: const Text('처음으로 돌아가기',style: TextStyle(fontSize:20),),
+                      child: const Text('처음으로 돌아가기',style: TextStyle(fontSize:23,fontWeight: FontWeight.bold),),
+                        style: ElevatedButton.styleFrom(
+                          minimumSize: Size(350,50),
+                          backgroundColor: Colors.green[900],
+                          shape: StadiumBorder(),
+                        )
                     )
                 ),
 

@@ -39,7 +39,6 @@ class _LoginAgainState extends State<Login_Again>{
         title: Text("회원가입/로그인",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: <Widget>[
-          IconButton(onPressed: (){Navigator.of(context).pushNamed('/TermQuiz1result');}, icon: Icon(Icons.arrow_forward)),
         ],
         backgroundColor: Colors.green[900],
       ),

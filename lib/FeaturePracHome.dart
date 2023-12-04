@@ -49,6 +49,17 @@ class FeaturePracticePage extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: SizedBox(
+          height: 60,
+          width: 60,
+          child:FittedBox(
+            child: FloatingActionButton(
+              onPressed: (){Navigator.of(context).pushNamed('/second');},
+              child: Icon(Icons.home),
+              backgroundColor: Colors.grey[800],
+            ),
+          )
+      ),
     );
   }
 

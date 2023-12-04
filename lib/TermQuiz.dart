@@ -4,6 +4,7 @@ class TermQuiz1 extends StatefulWidget {
   @override
   _TermQuiz1State createState() => _TermQuiz1State();
 }
+
 class _TermQuiz1State extends State<TermQuiz1>{
   String _userInput = '';
   @override
@@ -296,7 +297,6 @@ class TermQuiz2result extends StatelessWidget{
         title: Text("랜덤 용어 문제 풀기",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: <Widget>[
-          IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward)),
         ],
         backgroundColor: Colors.green[900],
       ),
