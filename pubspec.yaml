@@ -63,6 +63,19 @@ flutter:
     - image/cardAnswer.png
     - image/Quiz2real.png
     - image/card_info.png
+    - image/serial_logo.jpg
+    - image/creditcard.png
+    - image/direct.png
+    - image/food.png
+    - image/plus.png
+    - image/radiobutton_off.png
+    - image/radiobutton_on.png
+    - image/icon_circle1.png
+    - image/magnifier.png
+    - image/map.png
+    - image/map_blue.png
+    - image/map_red.png
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:

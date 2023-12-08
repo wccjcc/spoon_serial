@@ -138,26 +138,26 @@ class _LoginAgainState extends State<Login_Again>{
 
       ),
       bottomNavigationBar: Container(
-        height: 250, // 고정된 하단 컨테이너 높이
-        color: Colors.grey[400],
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(top: 10,bottom: 5,left: 10),
-              child: Text('도움말',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),textAlign: TextAlign.left,),
-            ),
-            Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('이제 회원가입 때 입력한 정보로 \n로그인 할 수 있습니다!',style: TextStyle(fontSize: 18),)
-            ),
-            Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('아이디와 비밀번호를 입력 후 \n로그인 버튼을 클릭하세요',style: TextStyle(fontSize: 18),)
-            ),
-          ],
-        ),
+      height: 250, // 고정된 하단 컨테이너 높이
+      color: Colors.grey[400],
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(top: 10,bottom: 5,left: 10),
+            child: Text('도움말',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),textAlign: TextAlign.left,),
+          ),
+          Padding(
+              padding: EdgeInsets.all(10),
+              child: Text('이제 회원가입 때 입력한 정보로 \n로그인 할 수 있습니다!',style: TextStyle(fontSize: 18),)
+          ),
+          Padding(
+              padding: EdgeInsets.all(10),
+              child: Text('아이디와 비밀번호를 입력 후 \n로그인 버튼을 클릭하세요',style: TextStyle(fontSize: 18),)
+          ),
+        ],
       ),
+    ),
       floatingActionButton: SizedBox(
           height: 60,
           width: 60,

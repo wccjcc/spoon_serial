@@ -73,11 +73,11 @@ class Delivery_Goal extends StatelessWidget{
                         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black), // 기본 스타일
                         children: <TextSpan>[
                           TextSpan(
-                            text: '배달이\n',
+                            text: '스푼가게의\n마라탕(순한맛)을\n',
                             style: TextStyle(color: Colors.green), // '아이스크림' 부분의 색상 변경
                           ),
                           TextSpan(
-                            text: '어쩌고\n',
+                            text: '배달시켜볼게요!',
                           ),
 
 
@@ -89,10 +89,12 @@ class Delivery_Goal extends StatelessWidget{
                   padding: EdgeInsets.all(15),
                   child: Column(
                     children: <Widget>[
-                      Text('1. ㅇㅇ',style: TextStyle(fontSize:25,color: Colors.black54),),
-                      Text('2. ㅁㅁ',style: TextStyle(fontSize:25,color: Colors.black54),),
-                      Text('3. ㅅㅅ',style: TextStyle(fontSize:25,color: Colors.black54),),
-                      Text('4. ㄷㄷ',style: TextStyle(fontSize:25,color: Colors.black54),),
+                      Text('1. 검색하기',style: TextStyle(fontSize:25,color: Colors.black54),),
+                      Text('2. 가게 선택하기',style: TextStyle(fontSize:25,color: Colors.black54),),
+                      Text('3. 메뉴 선택하기',style: TextStyle(fontSize:25,color: Colors.black54),),
+                      Text('4. 옵션 선택하기',style: TextStyle(fontSize:25,color: Colors.black54),),
+                      Text('5. 장바구니에 담기',style: TextStyle(fontSize:25,color: Colors.black54),),
+                      Text('6. 주문 및 결제하기',style: TextStyle(fontSize:25,color: Colors.black54),),
                     ],
                   ),
                 ),
@@ -100,7 +102,7 @@ class Delivery_Goal extends StatelessWidget{
                 Padding(
                     padding: EdgeInsets.all(15),
                     child: ElevatedButton(
-                        onPressed: (){Navigator.of(context).pushNamed('/featureprac');},
+                        onPressed: (){Navigator.of(context).pushNamed('/Delivery_Search');},
                         child: const Text('다음',style: TextStyle(fontSize:25,fontWeight: FontWeight.bold),),
                         style: ElevatedButton.styleFrom(
                           minimumSize: Size(350,50),

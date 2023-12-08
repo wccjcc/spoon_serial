@@ -28,10 +28,10 @@ class FeaturePracticePage extends StatelessWidget {
                   // 결제 버튼을 탭했을 때의 동작
                   Navigator.of(context).pushNamed('/Pay_Intro');
                 }),
-                _buildBoxButton(context, "키오스크", Icons.computer, () {
+                /*_buildBoxButton(context, "키오스크", Icons.computer, () {
                   // 기요스크 버튼을 탭했을 때의 동작
                   Navigator.of(context).pushNamed('/Kiosk_Intro');
-                }),
+                }),*/
                 _buildBoxButton(context, "뱅킹", Icons.money, () {
                   // 뱅킹 버튼을 탭했을 때의 동작
                   Navigator.of(context).pushNamed('/Banking_Intro');
